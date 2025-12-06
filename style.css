@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    overflow: hidden;
+}
+
+.glitch {
+    font-size: 120px;
+    font-weight: 400;
+    font-family: monospace;
+    color: #ff0033;
+    position: relative;
+    text-shadow: 0 0 10px #ff0033;
+    letter-spacing: 8px;
+    user-select: none;
+}
+
+.glitch::before,
+.glitch::after{
+    content: "404";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ff0033;
+    background: transparent;
+    overflow: hidden;
+    clip-path: inset(0 0 0);
+    opacity: 0.7;
+}
+
+.glitch::before{
+    text-shadow: -4px 0 #ff0033;
+}
+
+.glitch::after {
+    text-shadow: 4px 0 #ff0033;
+}
